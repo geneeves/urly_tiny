@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20130930172734) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -35,5 +36,4 @@ ActiveRecord::Schema.define(version: 20130930172734) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
 end
