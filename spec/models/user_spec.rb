@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_secure_password }
+
+  it do
+    User.create(:password => 'whatever', :password_confirmation => 'whatever')
+    should validate_uniqueness_of(:email)
+    # special test bc shoulda matchers is checking for uniqeness of email but unable to bypass secure password requirement.
+  end
 end
