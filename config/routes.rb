@@ -5,10 +5,10 @@ UrlyTiny::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
 
-  resources :users
-  resources :sessions
+  resources :users, :except => [:destroy, :edit, :update, :index]
+  resources :sessions, :except => [:edit, :update, :index, :show]
 
-  resources :urls
+  resources :urls, :except => [:destroy, :edit, :update, :new]
   # resources :visits, :only => [:show]
   get '/:id', :to => 'visits#show'
 

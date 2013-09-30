@@ -4,12 +4,11 @@ class UrlsController < ApplicationController
   end
 
   def create
-   @url = Url.new(url_params)
+    @url = Url.new(url_params)
     if @url.save
       redirect_to url_path(@url.id)
     else 
-      flash[:notice] = "Please enter a real url."
-      render urls
+      redirect_to '/', notice: "Please enter an entire URL."
     end
   end
 
@@ -17,7 +16,8 @@ class UrlsController < ApplicationController
     @url = Url.find(params[:id])
   end
 
-  private
+private
+
   def url_params 
     params.require(:url).permit(:original_url)
   end
