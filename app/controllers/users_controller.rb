@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-    
+
   end
 
   def create
@@ -13,6 +13,11 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+
+  def show
+    @urls = current_user.urls
+  end
+  
 
   private
 
