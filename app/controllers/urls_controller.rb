@@ -5,6 +5,8 @@ class UrlsController < ApplicationController
 
   def create
     @url = Url.new(url_params)
+    # :user_id => current_user.id
+    @url.user_id = current_user.id
     if @url.save
       redirect_to url_path(@url.id)
     else 
