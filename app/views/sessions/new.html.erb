@@ -1,13 +1,29 @@
-<h1>Log In</h1>
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <%= submit_tag  "log In" %>
-<% end %>
+<div class = 'container'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12 logo'>
+		<%= link_to image_tag('urly_tiny.png'), root_path %>
+			</div>
+		</div>
+	</div>
+
+
+	<div class='container'>
+		<div class='form-horizontal user'>
+			<h1>Log In</h1>
+			<%= form_tag sessions_path do %>
+			  <div class='form-group'>
+			    <%= label_tag :email %>
+			    <%= text_field_tag :email, params[:email] %>
+			  </div>
+			  <div class='form-group'>
+			    <%= label_tag :password %>
+			    <%= password_field_tag :password %>
+			  	<%= submit_tag "Log In", :class => 'btn btn-default' %>
+			  </div>
+			<% end %>
+			<p><%= link_to 'Create a New Account', new_user_path %></p>
+		</div>
+	</div>
+</div>
 

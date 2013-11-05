@@ -1,16 +1,19 @@
 class UrlsController < ApplicationController
   def index
     @url = Url.new
+    if current_user
+      @urls = Url.where(:user_id => current_user.id)
+    end
   end
 
   def create
     @url = Url.new(url_params)
-    # :user_id => current_user.id
     @url.user_id = current_user.id
     if @url.save
-      redirect_to url_path(@url.id)
+      redirect_to root_path
     else 
-      redirect_to '/', notice: "Please enter an entire URL."
+      redirect_to root_path
+      flash[:notice] = "Please enter an entire URL."
     end
   end
 

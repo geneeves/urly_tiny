@@ -9,7 +9,7 @@ UrlyTiny::Application.routes.draw do
   resources :users, :except => [:destroy, :edit, :update, :index, :show]
   resources :sessions, :except => [:edit, :update, :index,:show]
 
-  resources :urls, :except => [:destroy, :edit, :update, :new]
+  resources :urls, :except => [:edit, :update, :new]
   # resources :visits, :only => [:show]
   get '/:id', :to => 'visits#show'
 
