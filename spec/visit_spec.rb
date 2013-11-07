@@ -6,8 +6,7 @@ describe Visit do
   it "shows you how many visits a url has had" do
     url = Url.new(:original_url => "http://www.epicodus.com")
     url.save
-    url.visits.create
-    url.visits.create
+    2.times { url.visits.create }
     url.visits.count.should eq 2
   end
 end

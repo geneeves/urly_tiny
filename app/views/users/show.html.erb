@@ -1,5 +1,4 @@
 <h1> Link Stats </h1>
-
 <ul class='url-list'>
    <% @urls.each do |url| %>
     <li><%= url.original_url %></li> <li><%= request.base_url + '/' + url.shortened_url %></li>
