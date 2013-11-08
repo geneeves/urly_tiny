@@ -1,6 +1,6 @@
-== README
+# README
 
-URLyTiny is a collaborative project between Geneva Skeen (@geneeves) and Brittany 'Jazzy' Winston (@tallgirltaadaa), during Fall 2013 at Epicodus [http://www.epicodus.com]. URLyTiny is a url shortener which tracks the number of views you've had on a link. 
+URLyTiny is a collaborative project between Geneva Skeen (@geneeves) and Brittany 'Jazzy' Winston (@tallgirltaadaa), during Fall 2013 at [Epicodus](http://www.epicodus.com). URLyTiny is a url shortener which tracks the number of views you've had on a link. 
 
 Try it out [here](http://www.urlytiny.herokuapp.com). Enjoy!
 
